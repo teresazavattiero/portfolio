@@ -1,0 +1,317 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="jquery.min.js"></script>
+<style>
+
+body {
+  margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px;
+  display: inline;
+}
+
+@media screen and (min-width: 1090px) {
+  body {
+    background-color: black;}
+    .comp {
+      display: none;
+    }
+  .barra {
+    list-style-type: none;
+    padding: 0;
+    position: fixed;
+    width: 100%; height: 30px;
+    text-align: center;
+    margin-top: 2%;
+    z-index: 99;
+  }
+  .bg1 {
+    position: absolute;
+    background-image: url("vt.JPG");
+    width: 100%; height: 1%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    z-index: 1;
+  }
+  .bg2 {
+    position: absolute;
+    background-image: url("vt.JPG");
+    width: 100%; height: 455%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    z-index: 0;
+  }
+  .home a {
+    color: white;
+    text-decoration: none;
+    font-family: DinPro, sans-serif;
+    font-size: 11pt;
+    letter-spacing: 3px;
+  }
+  .home a:hover {
+    text-decoration: underline;
+  }
+  h1 {
+    color: white;
+    font-family: DinPro, sans-serif;
+    font-weight: lighter;
+    font-size: 20pt;
+  }
+  h2 {
+    color: white;
+    font-family: DinPro, sans-serif;
+    font-weight: lighter;
+    font-size: 15pt;
+    line-height: 23pt;
+  }
+  h2 a {
+    color: white;
+  }
+  h2 a:hover {
+    filter: brightness(50%);
+  }
+  .text {
+    position: absolute;
+    margin-top: 100px; margin-left: 5vw;
+    width: 500px;
+  }
+  .specifiche {
+    position: absolute;
+    margin-top: 100px; margin-left: 57vw;
+  }
+  .text2 {
+    position: relative;
+    margin-top: ; margin-left: 5vw;
+    width: 87vw;
+  }
+  .img1 {
+    position: relative;
+    height: 32.25vw; width: 43vw;
+    margin-top: 50vh; margin-left: 5vw;
+  }
+  .img2 {
+    position: relative;
+    height: 32.25vw; width: 43vw;
+    margin-top: ; margin-left: 1vw;
+  }
+  .img3 {
+    position: relative;
+    height: 32.25vw; width: 43vw;
+    margin-top: ; margin-left: 5vw;
+  }
+  .img4 {
+    position: relative;
+    height: 32.25vw; width: 43vw;
+    margin-top: ; margin-left: 1vw;
+  }
+  .img51 {
+    position: relative;
+    height: 16.125vw; width: 21.5vw;
+    margin-top: 0.25vw; margin-left: 5vw;
+  }
+  .img52 {
+    position: relative;
+    height: 16.125vw; width: 21.5vw;
+    margin-top: ; margin-left: 0.25vw;
+  }
+  h3 {
+    color: white;
+    font-family: DinPro, sans-serif;
+    font-weight: normal;
+    font-size: 20pt;
+  }
+  .contatti {
+    position: absolute;
+    margin-top: 3vh; margin-left: 5vw;
+  }
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  .fa:hover {
+    filter: brightness(50%);
+  }
+  .fa-envelope {
+    background: #D44638;
+    color: white;
+  }
+  .fa-linkedin {
+    background: #007BB5;
+    color: white;
+  }
+  .fa-behance {
+    background: #053EFF;
+    color: white;
+  }
+  .fa-instagram {
+    background: #E1306C;
+    color: white;
+  }
+} /* for desktops */
+
+
+@media screen and (max-width: 1089px) {
+  body {
+    background-color: #fafafa;
+  }
+  .cell {
+    display: none;
+  }
+  .barra {
+    margin-top: 7%;
+  }
+  li {
+    display: inline;
+  }
+  .home a {
+    position: relative;
+    color: #5b5b5b;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 11pt;
+    letter-spacing: 3px;
+  }
+  h1 {
+    position: relative;
+    margin-top: 8%; margin-left: 3vw; margin-right: 3vw;
+    color: #5b5b5b;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 50pt;
+    letter-spacing: 3px;
+    font-weight: bold;
+  }
+  h2 {
+    position: relative;
+    margin-top: 5%; margin-left: 3vw; margin-right: 3vw;
+    color: #5b5b5b;
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 14pt;
+    letter-spacing: 3px;
+    text-align: left;
+  }
+  h2 a {
+    color: #5b5b5b;
+  }
+  .text {
+    width: ;
+  }
+  .specifiche {
+    width: ;
+  }
+  .piccolo {
+    font-size: 8pt;
+  }
+  img {
+    position: relative;
+    height: auto; width: 94vw;
+    display: inline-block;
+    margin-left: 3vw;
+    margin-top: 5%;
+  }
+  .img51 {
+    position: relative;
+    height: auto; width: 31vw; margin-left: 1vw; margin-top: 1vw;
+  }
+  .img52 {
+    position: relative;
+    height: auto; width: 31vw; margin-left: 1vw; margin-top: 1vw;
+  }
+  .s {
+    margin-top: 4%;
+  }
+} /* for cellphones */
+
+
+</style>
+</head>
+<body>
+
+
+<div class="bg1">
+
+  <ul class="barra">
+    <li class="home">
+      <a href="index.html">TERESA ZAVATTIERO</a>
+    </li>
+  </ul>
+
+ <div class="text">
+   <h1>IL TRENO <br class="comp"> Georges Simenon</h1>
+   <h2>The visual book shows the reader the essential theme <br class="cell"> of the Simenon's 1961 novel, the break, communicating <br class="cell"> it on more levels: in its form and content.</h2>
+ </div>
+
+<div class="specifiche">
+   <h1 style="opacity: 0;" class="cell">.</h1>
+   <h2 class="piccolo">UNIVERSITY PROJECT<br>
+     <a href="videotrailer.html">See the project video trailer here</a><br>
+     Year: 2020
+   </h2>
+</div>
+
+</div>
+<div class="bg2">
+
+<img class="img1" src="visualbook1.jpg"></img>
+<img class="img2" src="visualbook2.jpg"></img>
+
+<div class="text2">
+  <h2>The silent book, composed of a photographic sequence and placed in the lower part of the book, reveals a plot parallel to the text of the novel, placed in the upper one, but independent of it.</h2>
+</div>
+
+<img class="img3" src="visualbook3.jpg"></img>
+<img class="img4" src="visualbook4.jpg"></img>
+
+<div class="text2">
+  <h2>The narrative plot hidden in the sequence of photos (of breaks, but also of images that are visually similar but which refer to the exception of the fracture as a rebirth and symbol of life) gives the reader a reflection, starting from the particular case of the protagonist of the novel to result in the broader meaning of break in his complexity.</h2>
+</div>
+
+<img class="img51 s" src="visualbook51.jpg"></img>
+<img class="img52" src="visualbook52.jpg"></img>
+<img class="img52" src="visualbook53.jpg"></img>
+<img class="img52" src="visualbook54.jpg"></img>
+<img class="img51" src="visualbook55.jpg"></img>
+<img class="img52" src="visualbook56.jpg"></img>
+<img class="img52" src="visualbook57.jpg"></img>
+<img class="img52" src="visualbook58.jpg"></img>
+<img class="img51" src="visualbook59.jpg"></img>
+<img class="img52" src="visualbook510.jpg"></img>
+<img class="img52" src="visualbook511.jpg"></img>
+<img class="img52" src="visualbook512.jpg"></img>
+
+<div class="text2">
+  <h2>Some details of the binding made by Giovanni Codina. The back cover holds the two parts of the book together and allows it to fold over itself, allowing a more comfortable use.</h2>
+</div>
+
+<img class="img3" src="visualbook6.JPG"></img>
+<img class="img4" src="visualbook7.jpg"></img>
+
+<div class="contatti cell">
+    <h3>CONTACT</h4>
+  <h5>
+    <a href="mailto:teresa.zavattiero@gmail.com" class="fa fa-envelope"></a>
+    <a href="https://www.linkedin.com/in/teresa-zavattiero-698a821b7/" class="fa fa-linkedin"></a>
+    <a href="https://www.behance.net/teresazavattiero" class="fa fa-behance"></a>
+    <a href="https://www.instagram.com/crysaltz/" class="fa fa-instagram"></a>
+  </h5>
+</div>
+
+</div>
+
+
+<script>
+
+</script>
+
+</body>
+</html>
