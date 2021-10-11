@@ -1,0 +1,861 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="jquery.min.js"></script>
+<style>
+
+body {
+  margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px;
+  display: inline;
+}
+
+@media screen and (min-width: 1090px) {
+   body {
+      background-color: black;
+    }
+  .barra {
+    list-style-type: none;
+    padding: 0;
+    position: fixed;
+    width: 100%; height: 30px;
+    text-align: center;
+    margin-top: 2%;
+    z-index: 99;
+  }
+  .bghome {
+    background-image: url("bghome.jpg");
+    width: 100%; height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+  }
+  .bg2 {
+    background-image: url("bg.jpg");
+    width: 100%; height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    top: 100%;
+  }
+  .bg3 {
+    background-image: url("bgg.jpg");
+    width: 100%; height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    top: 200%;
+  }
+  .bg4 {
+    background-image: url("bg.jpg");
+    width: 100%; height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    top: 300%;
+  }
+  .bg5 {
+    background-image: url("bghome.jpg");
+    width: 100%; height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    top: 400%;
+  }
+  .home a {
+    color: white;
+    text-decoration: none;
+    font-family: DinPro, sans-serif;
+    font-size: 11pt;
+    letter-spacing: 3px;
+  }
+  .home a:hover {
+    text-decoration: underline;
+  }
+  .cell {
+    display: none;
+  }
+  h1 {
+    position: absolute;
+    margin-top: 4%; margin-left: 50%;
+    transform: translate(-50%, 0%);
+    color: white;
+    font-family: DinPro, sans-serif;
+    font-weight: lighter;
+    font-size: 25pt;
+    letter-spacing: 3px;
+  }
+  #titolo {
+    position: absolute;
+    margin-top: 50vh; margin-left: 50vw;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: DinPro, sans-serif;
+    font-size: 40pt;
+    font-weight: lighter;
+    text-align: center;
+  }
+  #testo {
+    text-align: center;
+    margin-top: 40vh; margin-left: 50vw;
+    transform: translate(-50%, 0);
+    list-style-type: none;
+    padding: 0; padding-top: 20vh;
+    position: absolute;
+    opacity: 0;
+  }
+  #testo a {
+    color: white;
+    font-family: DinPro, sans-serif;
+    text-decoration: none;
+    font-weight: lighter;
+  }
+  #testo a:hover {
+    text-decoration: underline;
+  }
+  .list {
+    font-size: 30pt;
+    line-height: 38pt;
+  }
+  .about {
+    font-size: 15pt;
+    line-height: 75pt;
+    letter-spacing: 3px;
+  }
+  .spostamento1 {
+    animation: sposta1 0.2s linear forwards;
+  }
+  @keyframes sposta1 {
+    from {margin-top: 50vh;}
+    to {margin-top: 40vh;}
+  }
+  .spostamento2 {
+    animation: sposta2 0.2s linear forwards;
+  }
+  @keyframes sposta2 {
+    from {margin-top: 40vh; opacity: 0;}
+    to {margin-top: 30vh; opacity: 1;}
+  }
+  h3 {
+    position: absolute;
+    margin-top: 160px; margin-left: 16.375vw;
+    transform: translate(-50%, 14vw);
+    color: white;
+    font-family: DinPro, sans-serif;
+    font-weight: normal;
+    font-size: 20pt;
+    opacity: 0;
+    z-index: 98;
+  }
+  #didascalia2 {
+    margin-left: 49.4vw;
+  }
+  #didascalia3 {
+    margin-left: 82vw;
+  }
+  #didascalia5 {
+    margin-left: 49.4vw;
+  }
+  #didascalia6 {
+    margin-left: 82vw;
+  }
+  #didascalia8 {
+    margin-left: 49.4vw;
+  }
+  #didascalia9 {
+    margin-left: 82vw;
+  }
+  .comparsa {
+    animation: compari 0s linear forwards;
+  }
+  @keyframes compari {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .pagine {
+    padding: 0;
+    background-color: red; margin-top: 0px; margin-right: 0px;
+  }
+  .pagine li {
+    display: inline;
+  }
+  .foto {
+    position: absolute;
+    height: 32vw; width: 32vw;
+    margin-top: 160px; margin-left: 0.75vw;
+  }
+  .foto:hover {
+    filter: brightness(40%);
+  }
+  .foto2 {
+    position: absolute;
+    height: 32vw; width: 32vw;
+    margin-top: 160px; margin-left: 33.4vw;
+  }
+  .foto2:hover {
+    filter: brightness(40%);
+  }
+  .foto3 {
+    position: absolute;
+    height: 32vw; width: 32vw;
+    margin-top: 160px; margin-left: 66vw;
+    filter: brightness(85%);
+  }
+  .foto3:hover {
+    filter: brightness(40%);
+  }
+  .foto4 {
+    position: absolute;
+    height: 32vw; width: 32vw;
+    margin-top: 160px; margin-left: 0.75vw;
+  }
+  .foto4:hover {
+    filter: brightness(40%);
+  }
+  .foto5 {
+    position: absolute;
+    height: 32vw; width: 32vw;
+    margin-top: 160px; margin-left: 33.4vw;
+  }
+  .foto5:hover {
+    filter: brightness(40%);
+  }
+  .foto6 {
+    position: absolute;
+    height: 32vw; width: 32vw;
+    margin-top: 160px; margin-left: 66vw;
+  }
+  .foto6:hover {
+    filter: brightness(40%);
+  }
+  .foto7 {
+    position: absolute;
+    height: 32vw; width: 32vw;
+    margin-top: 160px; margin-left: 0.75vw;
+  }
+  .foto7:hover {
+    filter: brightness(40%);
+  }
+  .foto8 {
+    position: absolute;
+    height: 32vw; width: 32vw;
+    margin-top: 160px; margin-left: 33.4vw;
+  }
+  .foto8:hover {
+    filter: brightness(40%);
+  }
+  .foto9 {
+    position: absolute;
+    height: 32vw; width: 32vw;
+    margin-top: 160px; margin-left: 66vw;
+  }
+  .foto9:hover {
+    filter: brightness(40%);
+  }
+  .scuro {
+    animation: scurisci 0s linear forwards;
+  }
+  @keyframes scurisci {
+    from {filter: brightness(100%);}
+    to {filter: brightness(40%);}
+  }
+  h4 {
+    color: white;
+    font-family: DinPro, sans-serif;
+    font-weight: normal;
+    font-size: 20pt;
+  }
+  .sx {
+    position: absolute;
+    margin-top: 140px; margin-left: 10%;
+  }
+  .dx {
+    position: absolute;
+    margin-top: 140px; margin-left: 50%;
+  }
+  h5 {
+    color: white;
+    font-family: DinPro, sans-serif;
+    font-weight: lighter;
+    font-size: 15pt;
+    line-height: 0pt;
+  }
+  .contatti {
+    margin-top: 80px;
+  }
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  .fa:hover {
+    filter: brightness(50%);
+  }
+  .fa-envelope {
+    background: #D44638;
+    color: white;
+  }
+  .fa-linkedin {
+    background: #007BB5;
+    color: white;
+  }
+  .fa-behance {
+    background: #053EFF;
+    color: white;
+  }
+  .fa-instagram {
+    background: #E1306C;
+    color: white;
+  }
+} /* for desktops */
+
+
+@media screen and (max-width: 1089px) {
+  body {
+     background-color: #fafafa;
+   }
+  .bghome {
+    position: relative;
+    background-image: url("bghome.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100vw; height: 66.6666666vw;
+    padding-top: 5%;
+  }
+  #titolo {
+    position: absolute;
+    color: white;
+    font-family: DinPro, sans-serif;
+    font-size: 50pt;
+    font-weight: normal;
+    margin-top: 12%; margin-left: 8%;
+  }
+  #testo {
+    display: none;
+  }
+  ul {
+    list-style-type: none;
+  }
+  .bg2 {
+    margin-top: 5%;
+    background-color: #fafafa;
+    position: relative;
+    width: 100%;
+  }
+  .bg3 {
+    margin-top: 10%;
+    background-color: #fafafa;
+    position: relative;
+    width: 100%;
+  }
+  .bg4 {
+    margin-top: 10%;
+    background-color: #fafafa;
+    position: relative;
+    width: 100%;
+  }
+  .bg5 {
+    margin-top: 10%;
+    position: relative;
+    background-image: url("bghome.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100vw; height: 50vw;
+  }
+  .barra {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+    width: 100%; height: 30px;
+    text-align: left;
+    z-index: 99;
+    display: inline;
+  }
+  .overlay, .home {
+    display: inline;
+  }
+  .home a {
+    position: relative;
+    margin-left: 8%;
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 25pt;
+    letter-spacing: 3px;
+  }
+  .overlay a {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 80pt;
+    margin-left: 83%;
+  }
+  h1 {
+    position: relative;
+    margin-top: 2%; margin-left: 8%;
+    color: white;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 40pt;
+    letter-spacing: 3px;
+    text-align: left;
+  }
+  .titoli {
+    position: relative;
+    margin-top: 2%; margin-left: 3vw;
+    color: #5b5b5b;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 50pt;
+    letter-spacing: 3px;
+    text-align: left;
+  }
+  h3 {
+    position: relative;
+    margin-top: 10%; margin-left: 3vw;
+    color: #5b5b5b;
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 20pt;
+    letter-spacing: 3px;
+    text-align: left;
+  }
+  img {
+    position: relative;
+    height: 94vw; width: 94vw;
+    display: block;
+    margin-left: 3vw; margin-right: 3vw;
+  }
+  h4 {
+    position: relative;
+    padding-top: 7%; margin-left: 3vw;
+    color: white;
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 50pt;
+    letter-spacing: 3px;
+    text-align: left;
+  }
+  .dx {
+    display: none;
+  }
+  .comp {
+    display: none;
+  }
+  .fa {
+    padding: 40px;
+    font-size: 70px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin-top: ; margin-left: 3vw;
+    margin-bottom: 7%;
+  }
+  .fa-envelope {
+    background: #D44638;
+    color: white;
+  }
+  .fa-linkedin {
+    background: #007BB5;
+    color: white;
+    margin-left: 3%;
+  }
+  .fa-behance {
+    background: #053EFF;
+    color: white;
+    margin-left: 3%;
+  }
+  .fa-instagram {
+    background: #E1306C;
+    color: white;
+    margin-left: 3%;
+  }
+} /* for cellphones */
+
+
+</style>
+</head>
+<body>
+
+
+<div class="bghome" id="home.asp">
+
+  <ul class="barra">
+    <li class="home">
+      <a href="#home.asp">TERESA ZAVATTIERO</a>
+    </li>
+    <li class="cell overlay">
+      <a href="overlay.html">=</a>
+    </li>
+  </ul>
+
+  <h1>im Teresa Zavattiero</h1>
+  <h2 id="titolo">im a visual communicator</h2>
+  <ul id="testo">
+    <li><a href="#digitaldesign.asp" class="list">digital designer</a></li>
+    <li><a href="#graphicdesign.asp" class="list">graphic designer</a></li>
+    <li><a href="#illustration.asp" class="list">illustrator</a></li>
+    <li><a href="#about.asp" class="about">ABOUT</a></li>
+  </ul>
+
+</div>
+
+<div class="bg2" id="digitaldesign.asp">
+
+  <h1 class="titoli">digital design</h1>
+
+<h3 id="didascalia1">photographic video reportage</h3>
+
+<a href="videoreportage.html">
+  <img src="videoreportage.jpg" id="foto" class="foto">
+</a>
+
+<h3 id="didascalia2">visual book's video trailer</h3>
+
+<a href="videotrailer.html">
+  <img src="visualbook.jpg" id="foto2" class="foto2">
+</a>
+
+<h3 id="didascalia3">responsive website</h3>
+
+<a href="website.html">
+  <img src="wst.png" id="foto3" class="foto3">
+</a>
+
+</div>
+
+<div class="bg3" id="graphicdesign.asp">
+
+   <h1 class="titoli">graphic design</h1>
+
+<h3 id="didascalia4">visual book</h3>
+
+<a href="visualbook.html">
+  <img src="visualbook7.jpg" id="foto4" class="foto4">
+</a>
+
+<h3 id="didascalia5">wine shop's brand identity</h3>
+
+<a href="wineshop.html">
+  <img src="ws.jpg" id="foto5" class="foto5">
+</a>
+
+<h3 id="didascalia6">monography</h3>
+
+<a href="monography.html">
+  <img src="mono.jpg" id="foto6" class="foto6">
+</a>
+
+</div>
+
+<div class="bg4" id="illustration.asp">
+
+  <h1 class="titoli">illustration</h1>
+
+<h3 id="didascalia7">playing cards</h3>
+
+<a href="lupusinfabula.html">
+  <img src="lupus.jpg" id="foto7" class="foto7">
+</a>
+
+<h3 id="didascalia8">see more on my ig</h3>
+
+<a href="https://www.instagram.com/crysaltz/">
+  <img src="illl.png" id="foto8" class="foto8">
+</a>
+
+<h3 id="didascalia9">see more on my ig</h3>
+
+<a href="https://www.instagram.com/crysaltz/">
+  <img src="il3.png" id="foto9" class="foto9">
+</a>
+
+</div>
+
+<div class="bg5" id="about.asp">
+
+<div class="sx">
+  <h4 class="comp">ABOUT</h4>
+  <h5 class="comp">
+    Currently based in Padua
+  </h5>
+  <h5 class="comp">
+    Passionate about visual art in all its applications
+  </h5>
+  <h5 class="comp">
+    Interested in working in the field of art direction
+  </h5>
+
+  <h4 class="contatti">CONTACT</h4>
+  <h5>
+    <a href="mailto:teresa.zavattiero@gmail.com" class="fa fa-envelope"></a>
+    <a href="https://www.linkedin.com/in/teresa-zavattiero-698a821b7/" class="fa fa-linkedin"></a>
+    <a href="https://www.behance.net/teresazavattiero" class="fa fa-behance"></a>
+    <a href="https://www.instagram.com/crysaltz/" class="fa fa-instagram"></a>
+  </h5>
+</div>
+
+<div class="dx">
+  <h4>EDUCATION</h4>
+  <h5>
+    Communication design degree at Politecnico di Milano
+  </h5>
+  <h5>
+    Architecture and fine arts studies
+  </h5>
+  <h5>
+    Photography training course
+  </h5>
+</div>
+
+</div>
+
+<script>
+
+function primo_spostamento() {
+  $("#titolo").addClass("spostamento1");
+  $("#testo").addClass("spostamento2");
+}
+function torna_normale () {
+  $("#titolo").removeClass("spostamento1");
+  $("#testo").removeClass("spostamento2");
+}
+
+$("#titolo, #testo").hover(primo_spostamento);
+$("#titolo, #testo").mouseleave(torna_normale);
+
+
+
+function prima_comparsa () {
+  $("#didascalia1").addClass("comparsa");
+}
+function prima_scomparsa () {
+  $("#didascalia1").removeClass("comparsa");
+}
+
+$("#foto, #didascalia1").hover(prima_comparsa);
+$(".foto").mouseleave(prima_scomparsa);
+
+
+
+function seconda_comparsa () {
+  $("#didascalia2").addClass("comparsa");
+}
+function seconda_scomparsa () {
+  $("#didascalia2").removeClass("comparsa");
+}
+
+$("#foto2, #didascalia2").hover(seconda_comparsa);
+$(".foto2").mouseleave(seconda_scomparsa);
+
+
+
+function terza_comparsa () {
+  $("#didascalia3").addClass("comparsa");
+}
+function terza_scomparsa () {
+  $("#didascalia3").removeClass("comparsa");
+}
+
+$("#foto3, #didascalia3").hover(terza_comparsa);
+$(".foto3").mouseleave(terza_scomparsa);
+
+
+
+function quarta_comparsa () {
+  $("#didascalia4").addClass("comparsa");
+}
+function quarta_scomparsa () {
+  $("#didascalia4").removeClass("comparsa");
+}
+
+$("#foto4, #didascalia4").hover(quarta_comparsa);
+$(".foto4").mouseleave(quarta_scomparsa);
+
+
+
+function quinta_comparsa () {
+  $("#didascalia5").addClass("comparsa");
+}
+function quinta_scomparsa () {
+  $("#didascalia5").removeClass("comparsa");
+}
+
+$("#foto5, #didascalia5").hover(quinta_comparsa);
+$(".foto5").mouseleave(quinta_scomparsa);
+
+
+
+function sesta_comparsa () {
+  $("#didascalia6").addClass("comparsa");
+}
+function sesta_scomparsa () {
+  $("#didascalia6").removeClass("comparsa");
+}
+
+$("#foto6, #didascalia6").hover(sesta_comparsa);
+$(".foto6").mouseleave(sesta_scomparsa);
+
+
+
+function settima_comparsa () {
+  $("#didascalia7").addClass("comparsa");
+}
+function settima_scomparsa () {
+  $("#didascalia7").removeClass("comparsa");
+}
+
+$("#foto7, #didascalia7").hover(settima_comparsa);
+$(".foto7").mouseleave(settima_scomparsa);
+
+
+
+function ottava_comparsa () {
+  $("#didascalia8").addClass("comparsa");
+}
+function ottava_scomparsa () {
+  $("#didascalia8").removeClass("comparsa");
+}
+
+$("#foto8, #didascalia8").hover(ottava_comparsa);
+$(".foto8").mouseleave(ottava_scomparsa);
+
+
+
+function nona_comparsa () {
+  $("#didascalia9").addClass("comparsa");
+}
+function nona_scomparsa () {
+  $("#didascalia9").removeClass("comparsa");
+}
+
+$("#foto9, #didascalia9").hover(nona_comparsa);
+$(".foto9").mouseleave(nona_scomparsa);
+
+
+
+function primo_scuro () {
+  $("#foto").addClass("scuro");
+}
+function primo_normale () {
+  $("#foto").removeClass("scuro");
+}
+
+$("#didascalia1").hover(primo_scuro);
+$("#didascalia1").mouseleave(primo_normale);
+
+
+
+function secondo_scuro () {
+  $("#foto2").addClass("scuro");
+}
+function secondo_normale () {
+  $("#foto2").removeClass("scuro");
+}
+
+$("#didascalia2").hover(secondo_scuro);
+$("#didascalia2").mouseleave(secondo_normale);
+
+
+
+function terzo_scuro () {
+  $("#foto3").addClass("scuro");
+}
+function terzo_normale () {
+  $("#foto3").removeClass("scuro");
+}
+
+$("#didascalia3").hover(terzo_scuro);
+$("#didascalia3").mouseleave(terzo_normale);
+
+
+
+function quarto_scuro () {
+  $("#foto4").addClass("scuro");
+}
+function quarto_normale () {
+  $("#foto4").removeClass("scuro");
+}
+
+$("#didascalia4").hover(quarto_scuro);
+$("#didascalia4").mouseleave(quarto_normale);
+
+
+
+function quinto_scuro () {
+  $("#foto5").addClass("scuro");
+}
+function quinto_normale () {
+  $("#foto5").removeClass("scuro");
+}
+
+$("#didascalia5").hover(quinto_scuro);
+$("#didascalia5").mouseleave(quinto_normale);
+
+
+
+function sesto_scuro () {
+  $("#foto6").addClass("scuro");
+}
+function sesto_normale () {
+  $("#foto6").removeClass("scuro");
+}
+
+$("#didascalia6").hover(sesto_scuro);
+$("#didascalia6").mouseleave(sesto_normale);
+
+
+
+function settimo_scuro () {
+  $("#foto7").addClass("scuro");
+}
+function settimo_normale () {
+  $("#foto7").removeClass("scuro");
+}
+
+$("#didascalia7").hover(settimo_scuro);
+$("#didascalia7").mouseleave(settimo_normale);
+
+
+
+function ottavo_scuro () {
+  $("#foto8").addClass("scuro");
+}
+function ottavo_normale () {
+  $("#foto8").removeClass("scuro");
+}
+
+$("#didascalia8").hover(ottavo_scuro);
+$("#didascalia8").mouseleave(ottavo_normale);
+
+
+
+function nono_scuro () {
+  $("#foto9").addClass("scuro");
+}
+function nono_normale () {
+  $("#foto9").removeClass("scuro");
+}
+
+$("#didascalia9").hover(nono_scuro);
+$("#didascalia9").mouseleave(nono_normale);
+
+
+</script>
+
+</body>
+</html>
